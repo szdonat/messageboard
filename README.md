@@ -1,11 +1,18 @@
 # Message Board
 
+A simple message board application implemented in Go. The application consists of two services:
+
+- **message-board** – a Go REST API service that provides endpoints for creating and listing messages and their replies.
+- **Redis** – the data store used by the message-board service to persist messages and replies.
+
+The services are running as Docker containers and communicate over a dedicated Docker network.
+
 ## Requirements
 
 - Docker
 - cURL
 
-## Check the volume path
+## Check the Redis volume path
 
 Check and fix the volume path in docker-compose.yaml.
 Create the directory for the volume path if it does not exist.
