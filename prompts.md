@@ -2,15 +2,18 @@
 
 ## Prompt 1
 
+```
 Find the latest available Docker container version of Redis.
 Create a Docker Compose YAML file for this version of Redis and name the file docker-compose.yaml.
 Redis should use append-only persistence.
 Use the following directory for persistent data: ~/Desktop/Donat/id/redis-data.
 Add a comment to adapt this directory to the user's system.
 Generate commands to test the Redis container.
+```
 
 ## Prompt 2
 
+```
 Create the following files: /cmd/main.go, /internal/web/rest.go, /internal/repository/redis.go, and /internal/repository/repository.go.
 The repository.go file defines a Repository interface with a Ping() method that returns a string and an error.
 The redis.go file implements the Repository interface with a Ping() method that connects to the Redis instance, sends a ping, returns the response or an error, and closes the connection.
@@ -24,6 +27,7 @@ Add a new bridge network named message-board-network to both services in docker-
 Add REDIS_URL as an environment variable to message-board service in docker-compose.yaml.
 Create a .dockerignore file to ignore txt, md, and yaml files.
 Use Go version is 1.26.5.
+```
 
 ## Manual fixes
 
@@ -44,6 +48,8 @@ docker exec redis redis-cli FLUSHDB
 ```
 
 ## Prompt 3
+
+```
 Create the following methods in /internal/repository/repository.go and implement them in /internal/repository/redis.go:
 - CreateMessage(title, body string) (string, error)
 - ListMessages() (string, error)
@@ -67,6 +73,7 @@ createMessageHandle accepts JSON containing title and body.
 createReplyHandler accepts JSON containing reply.
 listMessagesHandler and listRepliesHandler return the JSON received from the repository.
 Generate cURL commands to test the endpoints.
+```
 
 ## Manual fixes
 
